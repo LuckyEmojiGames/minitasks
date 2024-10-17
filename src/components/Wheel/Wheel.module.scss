@@ -1,0 +1,72 @@
+.wheelText {
+	transform: rotate(-45deg);
+	white-space: pre-line;
+}
+
+.wheelText > div {
+	width: 90vw;
+	height: 90vw;
+	margin-left: 5vw;
+	margin-top: 70px;
+}
+
+.go_wrapper {
+
+
+	//filter: blur(5.150000095367432px);
+	padding: 7px;
+	display: inline-block;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+
+	& .block {
+		filter: blur(5.150000095367432px);
+		border-radius: 31px;
+		border: 1px solid #06F;
+		display: inline-block;
+		width: 96px;
+		height: 54px;
+		position: absolute;
+		left: -3px;
+		top: 0;
+	}
+}
+
+.go {
+	width: 80px;
+	height: 40px;
+	color: #FFF;
+	text-align: center;
+	font-family: "SF Pro Display", serif;
+	font-size: 17.919px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	border-radius: 31px;
+	background: linear-gradient(150deg, #1D77FF -2.42%, #345C99 128%);
+}
+
+.WheelBlock {
+	margin-top: 100px;
+	position: relative;
+}
+.titleBlock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+.title {
+	font-size: 27px;
+	font-family: "SFProDisplay-700", sans-serif;
+}
+.subTitle {
+	text-align: center;
+	font-family: "SFProDisplay-400", sans-serif;
+	width: 80%;
+	font-size: 13px;
+	color: #637599;
+}

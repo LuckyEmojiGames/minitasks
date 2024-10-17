@@ -1,0 +1,421 @@
+.stubScreenUI {
+  color: white;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  background: url("../../assets/images/stub/radians/head_radian.svg") no-repeat;
+  background-size: 100% 70%;
+  background-position: top;
+
+}
+
+.info_icon {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  top: 26px;
+  right: 0px;
+}
+
+.stubScreenConatiner {
+  width: 318px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grayText {
+  color: rgba(255, 255, 255, 0.50);
+  text-align: center;
+  font-family: "SFProDisplay-500", serif;
+  font-size: 11.681px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.inviteFriends {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.10);
+  padding-bottom: 20.86px;
+}
+
+.blockSubTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inviteFriendsTitle {
+  color: #FFF;
+  font-family: "SFProDisplay-700", sans-serif;
+  font-size: 26.032px;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 9.14px;
+  margin-top: 68px;
+}
+
+.inviteFriendsSubTitle {
+  color: #637599;
+  text-align: center;
+  font-family: "SFProDisplay-400", serif;
+  font-size: 13.274px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.secondBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 23px;
+  margin-bottom: 17px;
+
+  & .firstCol {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+
+  }
+
+
+  & .row {
+    font-family: "SFProDisplay-400", serif;
+    border-radius: 26px;
+    opacity: 0.87;
+    border: 2px solid #0197E8;
+    display: flex;
+    padding: 7px 15px;
+    align-items: center;
+    //height: 40px;
+
+    & .iconBlock {
+      width: 79px;
+      text-align: left;
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      & img {
+        width: 40px;
+      }
+    }
+
+    //& .img{
+    //    height: 30px;
+    //  }
+
+    & .textBlock {
+      width: 100%;
+      text-align: center;
+      //margin-left: 14px;
+
+
+    }
+
+
+  }
+
+  & .value {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 5px;
+    font-family: 'SFProDisplay-700', serif;
+  }
+
+  & .row.secondBlock {
+    & img {
+      width: 25px;
+    }
+  }
+
+  & .balanceHeader {
+    color: #FFF;
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+  }
+
+  & .friendsHeader {
+    color: #FFF;
+    text-align: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+  }
+}
+
+.headerFriend {
+    font-family: "SFProDisplay-400", serif;
+    font-size: 19px;
+}
+
+
+.refferals {
+  border-radius: 12px;
+  width: 318px;
+  flex-shrink: 0;
+  margin-top: 17px;
+  position: relative;
+  background: #111217 url("../../assets/images/stub/radians/friends.svg") no-repeat;
+  background-size: cover;
+  padding-bottom: 7px;
+
+  & .refferalsCount {
+    display: flex;
+    padding: 7px 25px;
+    gap: 26px;
+    z-index: 2;
+
+  }
+  .refferalsLink {
+    flex-shrink: 0;
+    border-radius: 7.939px;
+    background: rgba(14, 15, 20, 0.30);
+    backdrop-filter: blur(12.949999809265137px);
+    display: flex;
+    align-items: center;
+    padding: 7px 9px;
+    justify-content: space-between;
+    margin: 9px 25px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & .link {
+      color: #2D4D7D;
+      text-align: center;
+      font-family: "SF Pro Display", serif;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  & .radian {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+
+}
+
+.wheel {
+  cursor: pointer;
+  background: url("../../assets/images/stub/wheel.png") no-repeat;
+  width: 100%;
+  height: 80px;
+  flex-shrink: 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+
+  & .wheel_title {
+      margin-left: 16px;
+      width: 20%;
+      font-family: "SFProDisplay-500", serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      background: linear-gradient(180deg, #FFF 51.71%, #06F 139.8%);
+      background-clip: text;
+    }
+
+  & .wheel_timer {
+    margin-right: 16px;
+
+    & .title {
+      color: #FFF;
+      text-align: center;
+      font-family: "SFProDisplay-400", serif;
+      font-size: 10.391px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    & .time {
+      color: rgba(255, 255, 255, 0.50);
+      text-align: center;
+      font-family: "SFProDisplay-400", serif;
+      font-size: 10.391px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+  }
+}
+
+
+.moreAboutAwards {
+  border-radius: 13px;
+  border: 1px solid #0197E8;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 12px;
+  text-align: left;
+  position: relative;
+
+  & img.coin {
+    top: 18px;
+    right: 10px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  & .link {
+    color: #0197E8;
+    font-family: Montserrat, sans-serif;
+    //position: absolute;
+    font-size: 10px;
+    bottom: 10px;
+    align-items: center;
+    display: inline-block;
+
+    & .block {
+      display: flex;
+      gap: 3px;
+      margin-left: 5px;
+      align-items: center;
+
+      & img {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+  }
+}
+
+.blur {
+  background: rgba(0, 0, 0, 0.20);
+  -webkit-backdrop-filter: blur(3.75px);
+  backdrop-filter: blur(3.75px);
+  height: 100%;
+  width: 100vw;
+  z-index: 9;
+  left: calc((100vw - 318px) / 2 * -1);
+  position: absolute;
+}
+
+.modalHeaderClose {
+  position: absolute;
+  left: 0;
+  top: 43px;
+}
+
+.popup {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+
+
+  & .back {
+
+  }
+
+  & .modal {
+    width: 350px;
+    height: 271px;
+    border-radius: 22px;
+    background: #000 url("../../assets/images/stub/radians/radian_list_of_awards.png") no-repeat;
+    background-size: cover;
+
+    & .columns {
+      margin-top: 19px;
+      display: flex;
+      margin-left: 20px;
+      margin-right: 20px;
+      justify-content: space-between;
+
+      & .column {
+        & .header {
+          color: #FFF;
+          font-family: "SF Pro Display", serif;
+          font-size: 19.524px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin-bottom: 11px;
+        }
+
+        & .rows {
+          & .row {
+            color: rgba(255, 255, 255, 0.50);
+            font-family: "SF Pro Display", serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22.5px; /* 173.077% */
+          }
+        }
+      }
+    }
+  }
+
+  & .modalHeaderTitle {
+
+    color: #FFF;
+    text-align: center;
+    font-family: "SFProDisplay-500", serif;
+    font-size: 26.032px;
+    margin-top: 25px;
+
+    & .modalHeaderTitle {
+      color: #FFF;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 29px;
+    }
+  }
+
+
+}
+
+
+.FortuneBlock {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  left: calc((100vw - 318px) / 2 * -1);
+  background: linear-gradient(166deg, #010206 0.36%, #051024 108.52%);
+  z-index: 99999;
+}
+
+.backBlock {
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 43px;
+}
+
