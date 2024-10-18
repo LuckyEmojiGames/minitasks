@@ -3,6 +3,9 @@
 yarn dev
 ```
 
-# Для бэкенда
-Нужно либо запустить docker compose из репозитория с бэкендом
-Или подумать по другому
+# Чтоб открыть tma в telegram desktop
+Создаёшь бота в телеге и вставляешь в него локальную ссылку
+
+# Чтоб открыть на телефоне
+Используй этот гайд 
+https://docs.telegram-mini-apps.com/platform/getting-app-link#remote
