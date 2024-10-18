@@ -40,6 +40,9 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
+        backend: {
+            loadPath: '/minitasks/locales/{{lng}}/{{ns}}.json'  // Adjust for GitHub Pages base path
+        },
         fallbackLng: languageCode || 'en',
         debug: env === 'local',
         interpolation: {
