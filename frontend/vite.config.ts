@@ -8,7 +8,7 @@ dotenv.config();
 
 export default defineConfig({
   plugins: [react(), nodePolyfills()],
-  base: '/',
+  base: '/minitasks/',
   server: {
     https: {
       key: fs.readFileSync('./tg-mini-app.local-key.pem'),
