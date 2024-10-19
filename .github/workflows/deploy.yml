@@ -2,16 +2,20 @@
 name: Deploy static content to Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches: ['main']
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets the GITHUB_TOKEN permissions to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Allow one concurrent deployment
 concurrency:
   group: 'pages'
   cancel-in-progress: true
@@ -22,33 +26,38 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: minitasks  # Ensures no double nesting occurs
 
-      - name: Set up Node
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js with Yarn
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'yarn'
-          cache-dependency-path: ./frontend/yarn.lock
+          cache: 'yarn'  # Use Yarn's cache for dependencies
 
+      # Step 3: Install dependencies and build the frontend
       - name: Install dependencies and Build
+        working-directory: ./frontend  # Set working directory to frontend
         run: |
-          cd frontend  # Navigate to the correct directory
-          yarn install
-          yarn build
+          yarn install  # Install dependencies using Yarn
+          yarn build    # Build the project using Vite
 
+      # Step 4: Configure GitHub Pages for deployment
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # Step 5: Upload the built artifact to be deployed
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Upload the dist folder created by Vite
           path: './frontend/dist'
 
+      # Step 6: Deploy the artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
