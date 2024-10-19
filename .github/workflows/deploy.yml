@@ -21,7 +21,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -30,8 +29,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: ./minitasks  # Ensure correct path
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -40,22 +37,19 @@ jobs:
           cache: 'yarn'  # Cache for yarn dependencies
 
       - name: Install dependencies and Build
-        working-directory: ./minitasks/frontend  # Explicitly set working directory
         run: |
+          cd frontend  # Ensure correct directory
           yarn install
           yarn build
 
       - name: Setup Pages
-        working-directory: ./minitasks/frontend  # Ensure working directory is correct
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        working-directory: ./minitasks/frontend  # Ensure working directory is correct
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        working-directory: ./minitasks/frontend  # Ensure working directory is correct
         uses: actions/deploy-pages@v4
