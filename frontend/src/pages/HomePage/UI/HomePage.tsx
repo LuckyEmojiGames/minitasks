@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./homePage.module.css";
 ///<reference types="vite-plugin-svgr/client" />
 import Referral from "../../../shared/assets/images/mainPage/referall.svg?react";

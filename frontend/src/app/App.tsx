@@ -3,7 +3,6 @@ import { Layout } from "./layout/index";
 import AppRouter from "./routers/AppRouter";
 import { InfoPages } from "../pages/InfoPage/index";
 import { useEffect, useState } from "react";
-import { HomePage } from "../pages/HomePage";
 
 function App() {
   const [showMainScreen, setShowMainScreen] = useState<boolean>(false);
