@@ -1,13 +1,18 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   background-image: url("../../../shared/assets/images/loading/Ellipse.png"),
-    linear-gradient(-25deg, #010206, #051024);
+  linear-gradient(-25deg, #010206, #051024);
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  overflow: hidden;
 }
 
 /* .btnWrapper {
@@ -22,8 +27,6 @@
   display: flex;
   width: 200px;
   min-height: 70px;
-  margin-top: calc();
-  margin-left: 20%;
   border-radius: 15px;
   border: none;
   padding-top: 19px;
@@ -31,9 +34,12 @@
   justify-content: center;
   font-size: 26px;
   font-weight: 900;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   position: absolute;
-  margin-top: 550px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  -webkit-backface-visibility: hidden;
 }
 
 .title {

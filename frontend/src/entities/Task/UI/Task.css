@@ -1,0 +1,55 @@
+.task-wrapper {
+    background-color: #0f1a2b; /* Dark background as shown in the image */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Ensure responsiveness */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.task-title span {
+    font-size: 18px; /* Larger font for the title */
+    font-weight: bold;
+    color: white;
+}
+
+.task-description span {
+    font-size: 14px;
+    color: #a0aec0; /* Lighter gray for the description text */
+    margin-top: 8px;
+    display: block;
+}
+
+.divider {
+    height: 1px;
+    background-color: #2d3748; /* Darker line to separate sections */
+    margin: 16px 0;
+}
+
+.task-params {
+    display: flex;
+    align-items: center;
+}
+
+.task-workers, .task-reward, .task-title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+
+.task-workers img, .task-reward img, .task-title img {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+}
+
+.circle-divider {
+    width: 5px;
+    height: 5px;
+    background-color: #718096; /* Lighter divider circle color */
+    border-radius: 50%;
+    margin: 0 12px;
+}

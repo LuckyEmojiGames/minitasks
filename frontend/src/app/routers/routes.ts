@@ -3,6 +3,6 @@ export const ROUTES = {
     LOADING: "/minitasks/loading",
     ACADEMY: "/minitasks/academy",
     TASKS: "/minitasks/tasks",
-    RAITING: "/minitasks/raiting",
+    RATING: "/minitasks/rating",
     PROFILE: "/minitasks/profile"
 }

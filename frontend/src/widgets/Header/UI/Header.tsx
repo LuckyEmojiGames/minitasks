@@ -28,7 +28,7 @@ const navItems = [
   {
     name: "Rating",
     icon: <StarIcon width="30px" height="30px" fillOpacity={0.5}/>,
-    path: ROUTES.RAITING,
+    path: ROUTES.RATING,
   },
   {
     name: "Profile",
