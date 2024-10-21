@@ -8,9 +8,25 @@ function App() {
   const [showMainScreen, setShowMainScreen] = useState<boolean>(false);
 
   useEffect(() => {
-    const hasSeenInfo = localStorage.getItem("hasSeenInfo");
-    if (hasSeenInfo === "true") {
-      setShowMainScreen(true);
+    // const hasSeenInfo = localStorage.getItem("hasSeenInfo");
+    // if (hasSeenInfo === "true") {
+    //   setShowMainScreen(true);
+    // }
+    if (window.Telegram && window.Telegram.WebApp) {
+      console.log("Telegram WebApp API is connected.");
+      const tg = window.Telegram.WebApp;
+      tg.expand();
+      tg.ready();
+      if (!sessionStorage.getItem('reloaded')) {
+        sessionStorage.setItem('reloaded', 'true');
+        window.location.reload();
+      }
+      /*const hasSeenInfo = localStorage.getItem("hasSeenInfo");
+      if (hasSeenInfo === "true") {
+        setShowMainScreen(true);
+      }*/
+    } else {
+      console.error("Telegram WebApp API is not connected.");
     }
   }, []);
   const handleFinish = () => {

@@ -4,6 +4,19 @@ declare module "*.svg?react" {
     const ReactComponent: React.FC<
       React.ComponentProps<"svg"> & { title?: string }
     >;
-  
+
     export default ReactComponent;
-  }
+}
+
+declare global {
+    interface Window {
+        Telegram: {
+            WebApp: {
+                expand: () => void;
+                ready: () => void;
+            };
+        };
+    }
+}
+
+export {};
