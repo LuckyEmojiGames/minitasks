@@ -1,0 +1,1 @@
+export {default as InfoPages} from "./UI/InfoPages"
