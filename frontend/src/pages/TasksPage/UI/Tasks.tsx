@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Task } from '../../../entities/Task'; // Adjust the path if necessary
 import TopBar from '../TopBar/TopBar';
 import TaskFilters from '../TaskFilters/TaskFilters';
-import './tasks.css';
+import './Tasks.css';
 
 const tasksData = [
     {
