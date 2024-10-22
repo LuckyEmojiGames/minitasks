@@ -1,0 +1,33 @@
+.task-filters {
+    display: flex;
+    gap: 12px; /* Space between filter buttons */
+    overflow-x: auto; /* Horizontal scrolling for overflow */
+    padding: 10px 0 10px 5vw;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.task-filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem; /* Space between icon and text if icons are added later */
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    background: rgba(19, 48, 96, 1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+    flex-shrink: 0; /* Ensure buttons don’t shrink when scrolling */
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn.active {
+    background: rgba(41, 78, 139, 1);
+}

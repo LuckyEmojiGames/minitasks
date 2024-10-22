@@ -1,22 +1,21 @@
 .task-wrapper {
-    background-color: #0f1a2b; /* Dark background as shown in the image */
+    background: radial-gradient(45.04% 125.48% at 50% 125.48%, #082148 0%, #020A18 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     padding: 20px;
     border-radius: 10px;
-    width: 100%;
-    max-width: 400px; /* Ensure responsiveness */
+    width: 90vw;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: white;
     font-family: Arial, sans-serif;
 }
 
 .task-title span {
-    font-size: 18px; /* Larger font for the title */
+    font-size: 1rem; /* Larger font for the title */
     font-weight: bold;
     color: white;
 }
 
 .task-description span {
-    font-size: 14px;
+    font-size: 0.8rem;
     color: #a0aec0; /* Lighter gray for the description text */
     margin-top: 8px;
     display: block;
@@ -25,7 +24,7 @@
 .divider {
     height: 1px;
     background-color: #2d3748; /* Darker line to separate sections */
-    margin: 16px 0;
+    margin: 0.8rem 0;
 }
 
 .task-params {
@@ -33,17 +32,23 @@
     align-items: center;
 }
 
-.task-workers, .task-reward, .task-title {
+.task-workers, .task-reward, .task-platform {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: white;
 }
 
-.task-workers img, .task-reward img, .task-title img {
+.task-workers img, .task-reward img {
     margin-right: 8px;
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
+}
+
+.task-platform img {
+    margin-right: 8px;
+    width: 0.8rem;
+    height: auto;
 }
 
 .circle-divider {
@@ -53,3 +58,4 @@
     border-radius: 50%;
     margin: 0 12px;
 }
+

@@ -1,0 +1,57 @@
+.top-bar {
+    width: 100%;
+    background: radial-gradient(45.04% 125.48% at 50% 125.48%, #082148 0%, #020A18 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    /* Dark background */
+    border-bottom: 1px solid rgba(18, 48, 95, 1);
+    border-radius: 0px 0px 25px 25px;
+    padding: 9% 10% 3%;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.bell-icon {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.page-title {
+    margin-top: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.task-tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #14213d;
+    border-radius: 8px;
+    border: 1px solid rgba(19, 48, 96, 1)
+}
+
+
+.tab {
+    padding: 0.7rem 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background: rgba(11, 27, 53, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tab.active {
+    background: rgba(19, 48, 96, 1);
+    border-radius: 8px;
+}
+
+

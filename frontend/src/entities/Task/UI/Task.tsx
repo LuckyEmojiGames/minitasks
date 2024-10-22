@@ -1,6 +1,6 @@
-import workersIcon from "../../shared/assets/images/task/workers.svg"
-import moneyIcon from "../../shared/assets/images/task/money.svg"
-import platformIcon from "../../shared/assets/images/task/platform.svg"
+import workersIcon from "../../../shared/assets/images/task/workers.svg"
+import moneyIcon from "../../../shared/assets/images/task/money.svg"
+import platformIcon from "../../../shared/assets/images/task/platform.svg"
 import "./Task.css"
 import React from "react";
 
@@ -12,11 +12,11 @@ interface TaskProps {
     platform: string
 }
 
-const Task: React.FC<TaskProps> = () => {
+const Task: React.FC<TaskProps> = ({ title, description, workers, rewards, platform }) => {
     return (
         <div>
             <div className="task-wrapper">
-                <div className="task-title"><span>{Task.title}</span></div>
+                <div className="task-title"><span>{title}</span></div>
                 <div className="task-description"><span>{description}</span></div>
                 <div className="divider"></div>
                 <div className="task-params">
@@ -27,7 +27,7 @@ const Task: React.FC<TaskProps> = () => {
                     <div className="circle-divider"></div>
                     <div className="task-reward">
                         <img src={moneyIcon} alt="moneyIcon"/>
-                        <span>{reward}</span>
+                        <span>{rewards}</span>
                     </div>
                     <div className="circle-divider"></div>
                     <div className="task-platform">

@@ -1,0 +1,19 @@
+.tasks-page {/* Main background, dark as shown in design */
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.tasks-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-gap: 5px; /* Gap between task cards */
+    justify-items: center;
+}
