@@ -11,7 +11,13 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const location = useLocation();
-    const isTasksPage = location.pathname === ROUTES.TASKS;
+    const isTasksPage = [
+        ROUTES.TASKS,
+        ROUTES.TASKS_USERS,
+        ROUTES.TASKS_MONEY,
+        ROUTES.TASKS_BRIEFCASE,
+        ROUTES.TASKS_OTHER
+    ].some(route => location.pathname.includes(route));
 
   return (
     <div className={styles.layout}>
