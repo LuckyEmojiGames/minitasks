@@ -1,7 +1,3 @@
-html, body {
-  overflow: hidden;
-  height: 100%;
-}
 
 .layout {
   min-height: 100vh;
@@ -12,7 +8,6 @@ html, body {
   linear-gradient(-25deg, #010206, #051024);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 /* .btnWrapper {

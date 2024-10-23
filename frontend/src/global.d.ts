@@ -14,6 +14,7 @@ declare global {
             WebApp: {
                 expand: () => void;
                 ready: () => void;
+                disableVerticalSwipes: () => void;
             };
         };
     }

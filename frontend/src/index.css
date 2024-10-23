@@ -8,3 +8,13 @@
   font-weight: 400;
   overflow-x: hidden;
 }
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  position: relative;
+  margin: 0;
+  height: 100%;
+}

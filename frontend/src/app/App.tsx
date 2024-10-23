@@ -16,7 +16,8 @@ function App() {
       console.log("Telegram WebApp API is connected.");
       const tg = window.Telegram.WebApp;
       tg.expand();
-      tg.ready();
+      tg.disableVerticalSwipes();
+
       if (!sessionStorage.getItem('reloaded')) {
         sessionStorage.setItem('reloaded', 'true');
         window.location.reload();

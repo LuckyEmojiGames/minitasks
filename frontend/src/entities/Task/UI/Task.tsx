@@ -14,7 +14,7 @@ interface TaskProps {
 
 const Task: React.FC<TaskProps> = ({ title, description, workers, rewards, platform }) => {
     return (
-        <div>
+
             <div className="task-wrapper">
                 <div className="task-title"><span>{title}</span></div>
                 <div className="task-description"><span>{description}</span></div>
@@ -35,7 +35,7 @@ const Task: React.FC<TaskProps> = ({ title, description, workers, rewards, platf
                         <span>{platform}</span>
                     </div>
                 </div>
-            </div>
+
         </div>
     )
 }

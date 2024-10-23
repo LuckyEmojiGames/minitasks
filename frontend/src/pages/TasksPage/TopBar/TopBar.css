@@ -1,17 +1,16 @@
 .top-bar {
     width: 100%;
-    background: radial-gradient(45.04% 125.48% at 50% 125.48%, #082148 0%, #020A18 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    /* Dark background */
+    background: radial-gradient(45.04% 125.48% at 50% 125.48%, #082148 0%, #020A18 100%);
     border-bottom: 1px solid rgba(18, 48, 95, 1);
-    border-radius: 0px 0px 25px 25px;
-    padding: 9% 10% 3%;
+    border-radius: 0 0 25px 25px;
+    padding: 4vh 2% 3%;
 }
 
 .top-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .bell-icon {
@@ -28,16 +27,18 @@
 }
 
 .task-tabs {
+    width: 70%;
+    height: 5vh;
     display: flex;
     justify-content: center;
     background-color: #14213d;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(19, 48, 96, 1)
 }
 
 
 .tab {
-    padding: 0.7rem 1rem;
+    width: 100%;
     color: white;
     border: none;
     cursor: pointer;
@@ -46,6 +47,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+
+.tab span{
+    width: 90%;
+    font-size: 0.9rem;
 }
 
 
@@ -54,4 +62,30 @@
     border-radius: 8px;
 }
 
+@media (max-width: 404px) {
 
+    .tab span{
+        font-size: 0.8rem;
+    }
+
+
+}
+
+
+@media (max-width: 360px) {
+
+    .tab span{
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width: 316px) {
+
+    .tab span{
+        font-size: 0.6rem;
+    }
+
+
+
+}
