@@ -1,4 +1,4 @@
-package org.evo.minitasks.domain;
+package org.evo.minitasks.request;
 
 import lombok.Getter;
 import lombok.Setter;
