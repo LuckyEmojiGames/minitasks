@@ -1,4 +1,4 @@
-package org.evo.minitasks.domain;
+package org.evo.minitasks.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,4 +10,5 @@ public class JwtResponse {
     private final String type = "Bearer";
     private String accessToken;
     private String refreshToken;
+
 }
