@@ -20,6 +20,7 @@ public class AuthV1Controller {
         String secretKey = HmacService.generateHMACSignature(Configuration.BOT_TOKEN, "WebAppData");
         String hash = HmacService.generateHMACSignature(dataCheckString, secretKey);
         if (hash.equals(telegramHash)) {
+            // generate jwt
             return new ResponseEntity(HttpStatus.OK);
         }
         return new ResponseEntity(HttpStatus.UNAUTHORIZED);
