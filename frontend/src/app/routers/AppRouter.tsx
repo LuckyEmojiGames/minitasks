@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import { HomePage } from "../../pages/HomePage/index";
 import { ROUTES } from "./routes";
 import { Loading } from "../../pages/Loading/index";
-import Tasks from "../../pages/TasksPage/UI/Tasks.tsx";
+import MiniTasks from "../../pages/TasksPage/UI/MiniTasks/MiniTasks.tsx";
+import Other from "../../pages/TasksPage/UI/Other/Other.tsx";
 
 
 const AppRouter = () => {
@@ -10,7 +11,8 @@ const AppRouter = () => {
     <Routes>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.LOADING} element={<Loading />} />
-        <Route path={ROUTES.TASKS} element={<Tasks />} />
+        <Route path={ROUTES.TASKS} element={<MiniTasks />} />
+        <Route path={ROUTES.TASKS_OTHER} element={<Other />} />
     </Routes>
   );
 };

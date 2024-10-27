@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Task } from '../../../entities/Task'; // Adjust the path if necessary
-import TopBar from '../TopBar/TopBar';
-import TaskFilters from '../TaskFilters/TaskFilters';
-import './Tasks.css';
+import { Task } from '../../../../entities/Task'; // Adjust the path if necessary
+import TopBar from '../../TopBar/TopBar';
+import TaskFilters from '../../TaskFilters/TaskFilters';
+import './MiniTasks.css';
 
 const tasksData = [
     {
@@ -167,7 +167,7 @@ const tasksData = [
     }
 ];
 
-const Tasks: React.FC = () => {
+const MiniTasks: React.FC = () => {
     const [activeTab, setActiveTab] = useState('new');
     const [activePlatform, setActivePlatform] = useState <string | null> (null);
 
@@ -186,7 +186,7 @@ const Tasks: React.FC = () => {
 
     return (
         <div className="tasks-page">
-            <TopBar onTabChange={handleTabChange}/>
+            <TopBar pageName="minitasks" onTabChange={handleTabChange}/>
             <TaskFilters onFilterChange={handleFilterChange}/>
             <div className="tasks-wrapper">
                 <div className="tasks-container">
@@ -207,4 +207,4 @@ const Tasks: React.FC = () => {
     );
 };
 
-export default Tasks;
+export default MiniTasks;
