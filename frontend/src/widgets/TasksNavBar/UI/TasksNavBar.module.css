@@ -8,6 +8,7 @@
     background-color: rgba(4, 11, 24, 0.9);
     backdrop-filter: blur(3px);
     height: 9%;
+    max-height: 80px;
     overflow-y: hidden;
     padding: 0 5%;
 }

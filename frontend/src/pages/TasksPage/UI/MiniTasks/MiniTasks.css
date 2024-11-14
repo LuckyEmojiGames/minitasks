@@ -12,9 +12,6 @@
     gap: 5px;
 }
 
-.tasks-container:nth-last-child(1) {
-
-}
 
 .tasks-wrapper{
     height: fit-content;

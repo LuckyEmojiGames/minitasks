@@ -3,14 +3,33 @@
     background: radial-gradient(45.04% 125.48% at 50% 125.48%, #082148 0%, #020A18 100%);
     border-bottom: 1px solid rgba(18, 48, 95, 1);
     border-radius: 0 0 25px 25px;
-    padding: 4vh 2% 3%;
+    min-height: 13vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-section {
+    min-width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.page-subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    margin: 0;
 }
 
 .bell-icon {
@@ -22,11 +41,16 @@
 .page-title {
     margin-top: 0.4rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
-}
+    margin-bottom: 11px;
 
+}
+.other{
+    margin: 0;
+}
 .task-tabs {
+    min-height: 43px;
     width: 70%;
     height: 5vh;
     display: flex;
@@ -48,18 +72,30 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 
 .tab span{
     width: 90%;
     font-size: 0.9rem;
+    z-index: 100;
 }
 
 
-.tab.active {
-    background: rgba(19, 48, 96, 1);
-    border-radius: 8px;
+.tab-slider {
+    position: absolute;
+    bottom: 0;
+    min-height: 43px;
+    height: 5vh;
+    border-radius: 12px;
+    background-color: rgba(19, 48, 96, 1);
+    z-index: 0;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+.task-tabs, .finance-tabs {
+    position: relative;
 }
 
 @media (max-width: 404px) {

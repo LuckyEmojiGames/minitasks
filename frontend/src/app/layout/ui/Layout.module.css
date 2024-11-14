@@ -9,7 +9,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .layout::before {
@@ -24,5 +25,7 @@
   background-repeat: no-repeat;
   filter: blur(100px);
   z-index: -1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
