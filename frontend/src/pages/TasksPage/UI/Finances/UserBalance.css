@@ -1,0 +1,39 @@
+.user-balance {
+    width: 90%;
+    height: 109px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 20px;
+    margin-top: 30px;
+    background-color: #0B1B35;
+    border-radius: 10px;
+}
+
+.user-balance p {
+    font-size: 12px;
+    color: #FFFFFF80;
+}
+
+.toncoin-balance, .usdt-balance {
+    display: flex;
+    align-items: center;
+}
+
+.toncoin-balance img, .usdt-balance img {
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+}
+
+.usr-ton-balance, .usdt-balance span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
