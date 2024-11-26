@@ -4,6 +4,8 @@ import TopBar from '../../TopBar/TopBar';
 import TaskFilters from '../../TaskFilters/TaskFilters';
 import { useUser } from '../../../../app/context'; // Import the useUser hook
 import addTaskIcon from '../../../../shared/assets/images/tasks/addtask.png'
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../../../../app/routers/routes';
 import './MiniTasks.css';
 
 // Mock tasks data; replace owner with a telegram alias or user id.
@@ -51,7 +53,7 @@ const MiniTasks: React.FC = () => {
     const { user } = useUser(); // Get the user context
     const [activeTab, setActiveTab] = useState('new');
     const [activePlatform, setActivePlatform] = useState<string | null>(null);
-
+    const navigate = useNavigate();
     const handleTabChange = (tab: string) => {
         setActiveTab(tab);
         setActivePlatform(null);
@@ -88,7 +90,7 @@ const MiniTasks: React.FC = () => {
                 </div>
                 {user.role === 'customer' && (
                     <div className="create-task-button">
-                        <img src={addTaskIcon} alt={"Add Task"}/>
+                        <img src={addTaskIcon} alt={"Add Task"} onClick={() => navigate(ROUTES.TASKS_CREATE_TASK)}/>
                     </div>
                 )}
             </div>

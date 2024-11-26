@@ -1,0 +1,90 @@
+
+.create-task-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF80;
+}
+
+.create-task-container {
+    font-family: Inter;
+    color: #FFFFFF80;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 78vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.create-task-header {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0B1B35;
+    margin-bottom: 24px;
+}
+
+.create-task-header h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 19.36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    margin-bottom: 10px;
+}
+
+.task-description, .reward-info {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFFFFF80;
+}
+
+.create-task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.create-task-form input,
+.create-task-form textarea,
+.create-task-form select {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0B1B35;
+}
+
+.create-task-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.create-task-form input::placeholder,
+.create-task-form textarea::placeholder,
+.create-task-form select {
+    color: #FFFFFF80;
+}
+
+.publish-button {
+    margin-top: 5px;
+    background-color: #0066FF;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}

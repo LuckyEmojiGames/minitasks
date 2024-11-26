@@ -115,6 +115,13 @@ const TopBar: React.FC<TopBarProps> = ({ onTabChange = () => {}, pageName }) => 
                     tabs: null,
                     showBell: false,
                 };
+            
+            case 'create-task':
+                return {
+                    title: 'Создать задание',
+                    tabs: null,
+                    showBell: false,
+                };
 
             default:
                 return {

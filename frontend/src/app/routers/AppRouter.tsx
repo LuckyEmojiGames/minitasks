@@ -5,7 +5,7 @@ import { Loading } from "../../pages/Loading/index";
 import MiniTasks from "../../pages/TasksPage/UI/MiniTasks/MiniTasks.tsx";
 import Other from "../../pages/TasksPage/UI/Other/Other.tsx";
 import Finances from "../../pages/TasksPage/UI/Finances/Finances.tsx";
-
+import CreateTask from "../../pages/TasksPage/UI/MiniTasks/CreateTask.tsx";
 
 const AppRouter = () => {
   return (
@@ -15,6 +15,7 @@ const AppRouter = () => {
         <Route path={ROUTES.TASKS} element={<MiniTasks />} />
         <Route path={ROUTES.TASKS_OTHER} element={<Other />} />
         <Route path={ROUTES.TASKS_MONEY} element={<Finances />} />
+        <Route path={ROUTES.TASKS_CREATE_TASK} element={<CreateTask />} />
     </Routes>
   );
 };

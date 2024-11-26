@@ -8,5 +8,6 @@ export const ROUTES = {
     TASKS_USERS: "/minitasks/tasks/users/",
     TASKS_MONEY: "/minitasks/tasks/money/",
     TASKS_BRIEFCASE: "/minitasks/tasks/briefcase/",
-    TASKS_OTHER: "/minitasks/tasks/other/"
+    TASKS_OTHER: "/minitasks/tasks/other/",
+    TASKS_CREATE_TASK: "/minitasks/tasks/create-task/"
 }
