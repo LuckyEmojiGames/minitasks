@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import bellIcon from '../../../shared/assets/images/tasks/bell.svg'; // Replace with the correct path
 import './TopBar.css';
+import NotificationModal from "../NotificationModal/NotificationModal.tsx";
 
 interface TopBarProps {
-    onTabChange?: (tab: string) => void; // Optional callback for tab changes
-    pageName: string;                    // The name of the current page
+    onTabChange?: (tab: string) => void;
+    pageName: string;
 }
 
 const TopBar: React.FC<TopBarProps> = ({ onTabChange = () => {}, pageName }) => {
+    const [isModalVisible, setModalVisible] = useState(false);
+
     const getDefaultTab = (pageName: string) => {
         switch (pageName) {
             case 'minitasks':
@@ -20,6 +23,14 @@ const TopBar: React.FC<TopBarProps> = ({ onTabChange = () => {}, pageName }) => 
                 return '';
         }
     }
+
+    const handleBellClick = () => {
+        setModalVisible(true);
+    };
+
+    const handleCloseModal = () => {
+        setModalVisible(false);
+    };
 
     const [activeTab, setActiveTab] = useState(() => getDefaultTab(pageName));
     const [sliderStyle, setSliderStyle] = useState({});
@@ -115,7 +126,7 @@ const TopBar: React.FC<TopBarProps> = ({ onTabChange = () => {}, pageName }) => 
                     tabs: null,
                     showBell: false,
                 };
-            
+
             case 'create-task':
                 return {
                     title: 'Создать задание',
@@ -137,15 +148,12 @@ const TopBar: React.FC<TopBarProps> = ({ onTabChange = () => {}, pageName }) => 
     return (
         <div className="top-bar">
             <div className={`top-section ${tabs === null ? 'hidden' : ''}`}>
-                {showBell && <img src={bellIcon} alt="Notifications" className="bell-icon" />}
+                {showBell && <img src={bellIcon} alt="Notifications" className="bell-icon" onClick={handleBellClick} />}
                 {tabs}
             </div>
             <h1 className={`page-title ${tabs === null ? 'other' : ''}`}>{title}</h1>
-            {
-                title==='Еще'
-                &&
-                <h2 className="page-subtitle">Страница вашего профиля</h2>
-            }
+            {title === 'Еще' && <h2 className="page-subtitle">Страница вашего профиля</h2>}
+            {isModalVisible && <NotificationModal onClose={handleCloseModal} />}
         </div>
     );
 };
